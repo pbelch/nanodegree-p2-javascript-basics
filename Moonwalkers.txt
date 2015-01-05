@@ -1,0 +1,39 @@
+var moonWalkers = [
+  "Neil Armstrong",
+  "Buzz Aldrin",
+  "Pete Conrad",
+  "Alan Bean",
+  "Alan Shepard",
+  "Edgar Mitchell",
+  "David Scott",
+  "James Irwin",
+  "John Young",
+  "Charles Duke",
+  "Eugene Cernan",
+  "Harrison Schmitt"
+];
+
+function alphabetizer(name) {
+   // Your code goes here!
+   var fullList= [];
+    
+  //Standard condensed loop code 		
+  for (var i=0 ; 
+       i < name.length; 
+       i++)
+  {
+    var fullName = name[i].split(' ');
+    firstName = fullName[0];
+    lastName = fullName[fullName.length - 1];
+
+ fullList.push (lastName + ", " + firstName);
+     }
+   
+    fullList.sort();
+    
+    return fullList;
+}
+
+
+// Try logging your results to test your code!
+console.log(alphabetizer(moonWalkers));
